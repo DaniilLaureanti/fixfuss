@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixFuss Hamburg - Maßschuhe & Reparaturen vom Meisterbetrieb</title>
+    <meta name="description" content="Professionelle Schuhreparatur, orthopädische Maßschuhe und Einlagen vom Meisterbetrieb in Hamburg. Kostenlose Beratung und 2 Jahre Garantie.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#0F172A',
+                        'leather': '#8B4513',
+                        'light-gray': '#F1F5F9'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-inter text-navy">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-navy">FixFuss Hamburg</div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#hero" class="hover:text-leather transition-colors">Home</a>
+                    <a href="#leistungen" class="hover:text-leather transition-colors">Leistungen</a>
+                    <a href="#ablauf" class="hover:text-leather transition-colors">Ablauf</a>
+                    <a href="#warum-wir" class="hover:text-leather transition-colors">Warum wir?</a>
+                    <a href="#referenzen" class="hover:text-leather transition-colors">Referenzen</a>
+                    <a href="#kontakt" class="hover:text-leather transition-colors">Kontakt</a>
+                </div>
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="#hero" class="block py-2 hover:text-leather transition-colors">Home</a>
+                <a href="#leistungen" class="block py-2 hover:text-leather transition-colors">Leistungen</a>
+                <a href="#ablauf" class="block py-2 hover:text-leather transition-colors">Ablauf</a>
+                <a href="#warum-wir" class="block py-2 hover:text-leather transition-colors">Warum wir?</a>
+                <a href="#referenzen" class="block py-2 hover:text-leather transition-colors">Referenzen</a>
+                <a href="#kontakt" class="block py-2 hover:text-leather transition-colors">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-bg min-h-screen flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                Handwerk, das passt.
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Maß- & Orthopädieschuhe sowie Reparaturen vom Meisterbetrieb in Hamburg
+            </p>
+            <a href="#kontakt" class="inline-block bg-leather hover:bg-leather/90 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+                Jetzt kostenlose Beratung sichern
+            </a>
+        </div>
+    </section>
+
+    <!-- Unsere Leistungen -->
+    <section id="leistungen" class="py-20 bg-light-gray">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Unsere Leistungen</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Schuhreparatur -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Schuhreparatur" class="w-full h-32 object-cover rounded mb-4" loading="lazy">
+                    <div class="text-leather text-3xl mb-4">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Schuhreparatur</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>• Absatz- und Fersenfleck-Erneuerung</li>
+                        <li>• Neubesohlung (Leder, Gummi, Vibram)</li>
+                        <li>• Näharbeiten & Riss-Reparaturen</li>
+                        <li>• Reißverschluss-Tausch</li>
+                        <li>• Lederfärbung & Finish-Auffrischung</li>
+                        <li>• Weiten / Stretch-Service</li>
+                        <li>• Geräuschreduzierung</li>
+                        <li>• Imprägnierung & Pflegepakete</li>
+                    </ul>
+                </div>
+
+                <!-- Orthopädische Schuhtechnik -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Orthopädische Schuhtechnik" class="w-full h-32 object-cover rounded mb-4" loading="lazy">
+                    <div class="text-leather text-3xl mb-4">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Orthopädische Schuhtechnik</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>• Orthopädische Maßschuhe</li>
+                        <li>• Individuelle Einlagen & Sporteinlagen</li>
+                        <li>• Schuhzurichtungen (Abrollsohle)</li>
+                        <li>• Beinlängenausgleich</li>
+                        <li>• Pufferabsätze</li>
+                        <li>• Diabetiker-Schutzschuhe</li>
+                        <li>• Sicherheitsschuhe nach Maß</li>
+                    </ul>
+                </div>
+
+                <!-- Maßschuhe & Bespoke -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" alt="Maßschuhe & Bespoke" class="w-full h-32 object-cover rounded mb-4" loading="lazy">
+                    <div class="text-leather text-3xl mb-4">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Maßschuhe & Bespoke</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>• Klassische Herren-/Damenschuhe</li>
+                        <li>• Sneaker-Customization</li>
+                        <li>• Individualisierbare Lederaccessoires</li>
+                        <li>• Gürtel nach Maß</li>
+                        <li>• Portemonnaies</li>
+                    </ul>
+                </div>
+
+                <!-- Reparatur Lederwaren -->
+                <div class="bg-white p-6 rounded-lg shadow-lg md:col-span-2 lg:col-span-1">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Reparatur Lederwaren" class="w-full h-32 object-cover rounded mb-4" loading="lazy">
+                    <div class="text-leather text-3xl mb-4">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Reparatur Lederwaren</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>• Taschen-Service (Nähte, Beschläge)</li>
+                        <li>• Gürtel-Reparaturen</li>
+                        <li>• Futter-Erneuerung</li>
+                        <li>• Lederauffrischung</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ablauf -->
+    <section id="ablauf" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Unser Ablauf</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-leather text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="text-xl font-semibold mb-4">Beratung</h3>
+                    <p class="text-gray-600">Kostenlose Erstberatung und Begutachtung Ihrer Schuhe oder Wünsche für Maßanfertigungen.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-leather text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="text-xl font-semibold mb-4">Annahme</h3>
+                    <p class="text-gray-600">Auftragsannahme mit detaillierter Kostenaufstellung und Terminvereinbarung.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-leather text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="text-xl font-semibold mb-4">Abholung/Versand</h3>
+                    <p class="text-gray-600">Fertigstellung und Übergabe Ihrer perfekt reparierten oder maßgefertigten Schuhe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warum wir? -->
+    <section id="warum-wir" class="py-20 bg-light-gray">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Warum wir?</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="text-leather text-3xl mb-4">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Meisterbetrieb</h3>
+                    <p class="text-gray-600">Zertifizierter Handwerksmeister mit jahrzehntelanger Erfahrung und traditionellem Können.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="text-leather text-3xl mb-4">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Premium-Materialien</h3>
+                    <p class="text-gray-600">Ausschließlich hochwertige Leder und Materialien von renommierten europäischen Herstellern.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="text-leather text-3xl mb-4">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Orthopädie-Know-how</h3>
+                    <p class="text-gray-600">Spezialisierung auf orthopädische Schuhtechnik und medizinische Fußversorgung.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="text-leather text-3xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">2 Jahre Garantie</h3>
+                    <p class="text-gray-600">Umfassende Garantie auf alle Arbeiten - Ihr Vertrauen ist unser Anspruch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referenzen -->
+    <section id="referenzen" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Referenzen</h2>
+            
+            <!-- Before/After Slider -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold text-center mb-8">Vorher/Nachher</h3>
+                <div class="relative max-w-4xl mx-auto">
+                    <div id="slider-container" class="overflow-hidden rounded-lg">
+                        <div id="slider" class="flex transition-transform duration-300">
+                            <div class="w-full flex-shrink-0">
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div class="text-center">
+                                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=400&q=80" alt="Vorher" class="w-full rounded-lg mb-2" loading="lazy">
+                                        <p class="text-sm text-gray-600">Vorher: Abgetragene Sohle</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Nachher" class="w-full rounded-lg mb-2" loading="lazy">
+                                        <p class="text-sm text-gray-600">Nachher: Neue Vibram-Sohle</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full flex-shrink-0">
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div class="text-center">
+                                        <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=400&q=80" alt="Vorher 2" class="w-full rounded-lg mb-2" loading="lazy">
+                                        <p class="text-sm text-gray-600">Vorher: Beschädigter Absatz</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=400&q=80" alt="Nachher 2" class="w-full rounded-lg mb-2" loading="lazy">
+                                        <p class="text-sm text-gray-600">Nachher: Perfekt repariert</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="prevSlide()" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-navy p-2 rounded-full">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button onclick="nextSlide()" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-navy p-2 rounded-full">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Kundenstimmen -->
+            <div>
+                <h3 class="text-2xl font-semibold text-center mb-8">Kundenstimmen</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="text-yellow-400 mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">"Hervorragende Arbeit! Meine alten Lederschuhe sehen aus wie neu. Sehr professionell und pünktlich."</p>
+                        <p class="font-semibold">- Maria S.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="text-yellow-400 mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">"Die orthopädischen Einlagen haben meine Fußschmerzen komplett beseitigt. Absolute Empfehlung!"</p>
+                        <p class="font-semibold">- Thomas K.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="text-yellow-400 mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">"Maßschuhe vom Feinsten! Perfekte Passform und erstklassige Qualität. Jeden Euro wert."</p>
+                        <p class="font-semibold">- Dr. Weber</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 bg-light-gray">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Häufige Fragen</h2>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-white rounded-lg shadow-lg">
+                    <button onclick="toggleFAQ(1)" class="w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold">Wie lange dauert eine Schuhreparatur?</h3>
+                            <i id="faq-icon-1" class="fas fa-plus text-leather"></i>
+                        </div>
+                    </button>
+                    <div id="faq-content-1" class="hidden px-6 pb-6">
+                        <p class="text-gray-600">Die meisten Reparaturen dauern 3-7 Werktage. Bei komplexeren Arbeiten oder Maßanfertigungen kann es 2-4 Wochen dauern. Wir informieren Sie immer über die voraussichtliche Fertigstellung.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg">
+                    <button onclick="toggleFAQ(2)" class="w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold">Bieten Sie auch einen Abholservice an?</h3>
+                            <i id="faq-icon-2" class="fas fa-plus text-leather"></i>
+                        </div>
+                    </button>
+                    <div id="faq-content-2" class="hidden px-6 pb-6">
+                        <p class="text-gray-600">Ja, für Kunden im Hamburger Stadtgebiet bieten wir einen kostenlosen Abhol- und Bringservice ab einem Auftragswert von 50€ an.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg">
+                    <button onclick="toggleFAQ(3)" class="w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold">Welche Garantie geben Sie auf Ihre Arbeiten?</h3>
+                            <i id="faq-icon-3" class="fas fa-plus text-leather"></i>
+                        </div>
+                    </button>
+                    <div id="faq-content-3" class="hidden px-6 pb-6">
+                        <p class="text-gray-600">Wir gewähren 2 Jahre Garantie auf alle unsere Arbeiten. Bei Maßschuhen sogar 3 Jahre. Die Garantie umfasst Material- und Verarbeitungsfehler.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg">
+                    <button onclick="toggleFAQ(4)" class="w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold">Können Sie auch sehr alte oder seltene Schuhe reparieren?</h3>
+                            <i id="faq-icon-4" class="fas fa-plus text-leather"></i>
+                        </div>
+                    </button>
+                    <div id="faq-content-4" class="hidden px-6 pb-6">
+                        <p class="text-gray-600">Ja, wir sind spezialisiert auf die Restauration von Vintage-Schuhen und seltenen Modellen. Bringen Sie Ihre Schuhe zur kostenlosen Begutachtung vorbei.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg">
+                    <button onclick="toggleFAQ(5)" class="w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold">Benötige ich einen Termin für die Beratung?</h3>
+                            <i id="faq-icon-5" class="fas fa-plus text-leather"></i>
+                        </div>
+                    </button>
+                    <div id="faq-content-5" class="hidden px-6 pb-6">
+                        <p class="text-gray-600">Für eine ausführliche Beratung empfehlen wir einen Termin. Für kleinere Reparaturen können Sie auch ohne Termin während unserer Öffnungszeiten vorbeikommen.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg">
+                    <button onclick="toggleFAQ(6)" class="w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-semibold">Arbeiten Sie mit Krankenkassen zusammen?</h3>
+                            <i id="faq-icon-6" class="fas fa-plus text-leather"></i>
+                        </div>
+                    </button>
+                    <div id="faq-content-6" class="hidden px-6 pb-6">
+                        <p class="text-gray-600">Ja, wir sind zugelassener Leistungserbringer für orthopädische Hilfsmittel. Bei medizinischer Notwendigkeit übernehmen die Krankenkassen oft die Kosten für orthopädische Einlagen und Zurichtungen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Kontakt</h2>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Kontaktformulare -->
+                <div class="space-y-8">
+                    <!-- Callback Form -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4">Rückruf anfordern</h3>
+                        <form id="callback-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-1">Name *</label>
+                                <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-leather">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium mb-1">Telefon *</label>
+                                <input type="tel" id="phone" name="phone" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-leather">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-1">Nachricht</label>
+                                <textarea id="message" name="message" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-leather"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-leather hover:bg-leather/90 text-white py-2 px-4 rounded-md transition-colors">
+                                Rückruf anfordern
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Photo Upload Form -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4">Schuhe fotografieren & Kostenvoranschlag erhalten</h3>
+                        <form id="photo-form" class="space-y-4">
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-1">E-Mail *</label>
+                                <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-leather">
+                            </div>
+                            <div>
+                                <label for="photos" class="block text-sm font-medium mb-1">Fotos hochladen (max. 10MB)</label>
+                                <input type="file" id="photos" name="photos" multiple accept="image/*,.pdf" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-leather">
+                                <p class="text-xs text-gray-500 mt-1">JPG, PNG oder PDF, max. 10MB</p>
+                            </div>
+                            <div>
+                                <label for="description" class="block text-sm font-medium mb-1">Beschreibung des Problems</label>
+                                <textarea id="description" name="description" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-leather"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-navy hover:bg-navy/90 text-white py-2 px-4 rounded-md transition-colors">
+                                Kostenvoranschlag anfordern
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Kontaktinformationen -->
+                <div class="space-y-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4">Unser Atelier</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-map-marker-alt text-leather mt-1"></i>
+                                <div>
+                                    <p class="font-medium">FixFuss Hamburg</p>
+                                    <p class="text-gray-600">Musterstraße 456<br>20095 Hamburg</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-phone text-leather"></i>
+                                <p>+49 40 987 654 321</p>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-envelope text-leather"></i>
+                                <p>info@fixfuss-hamburg.de</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4">Öffnungszeiten</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span>Montag - Freitag:</span>
+                                <span>9:00 - 18:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Samstag:</span>
+                                <span>9:00 - 14:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Sonntag:</span>
+                                <span>Geschlossen</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps Placeholder -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4">Anfahrt</h3>
+                        <div class="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
+                            <p class="text-gray-500">Google Maps wird hier eingebettet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">FixFuss Hamburg</h3>
+                    <p class="text-gray-300 text-sm">
+                        Traditionelles Handwerk trifft moderne Technik. Seit über 30 Jahren Ihr Partner für hochwertige Schuhreparaturen und orthopädische Lösungen.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#hero" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#leistungen" class="text-gray-300 hover:text-white transition-colors">Leistungen</a></li>
+                        <li><a href="#ablauf" class="text-gray-300 hover:text-white transition-colors">Ablauf</a></li>
+                        <li><a href="#warum-wir" class="text-gray-300 hover:text-white transition-colors">Warum wir?</a></li>
+                        <li><a href="#referenzen" class="text-gray-300 hover:text-white transition-colors">Referenzen</a></li>
+                        <li><a href="#kontakt" class="text-gray-300 hover:text-white transition-colors">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Kontakt</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li>Musterstraße 456</li>
+                        <li>20095 Hamburg</li>
+                        <li>+49 40 987 654 321</li>
+                        <li>info@fixfuss-hamburg.de</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Folgen Sie uns</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-google"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-300">
+                <p>&copy; 2024 FixFuss Hamburg. Alle Rechte vorbehalten.</p>
+                <div class="mt-2 space-x-4">
+                    <a href="#" class="hover:text-white transition-colors">Impressum</a>
+                    <a href="#" class="hover:text-white transition-colors">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-navy text-white p-4 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <p class="text-sm mb-4 md:mb-0">
+                Wir verwenden Cookies, um Ihnen die beste Erfahrung auf unserer Website zu bieten. 
+                <a href="#" class="underline">Mehr erfahren</a>
+            </p>
+            <div class="flex space-x-4">
+                <button onclick="acceptCookies()" class="bg-leather hover:bg-leather/90 px-4 py-2 rounded text-sm transition-colors">
+                    Akzeptieren
+                </button>
+                <button onclick="declineCookies()" class="border border-white hover:bg-white hover:text-navy px-4 py-2 rounded text-sm transition-colors">
+                    Ablehnen
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // FAQ Toggle
+        function toggleFAQ(index) {
+            const content = document.getElementById(`faq-content-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('fa-plus');
+            icon.classList.toggle('fa-minus');
+        }
+
+        // Slider functionality
+        let currentSlide = 0;
+        const totalSlides = 2;
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const slider = document.getElementById('slider');
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        // Auto-slide every 5 seconds
+        setInterval(nextSlide, 5000);
+
+        // Form submissions
+        document.getElementById('callback-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Vielen Dank! Wir werden Sie in Kürze kontaktieren.');
+        });
+
+        document.getElementById('photo-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Vielen Dank! Wir werden Ihnen einen Kostenvoranschlag zusenden.');
+        });
+
+        // Cookie Banner
+        function acceptCookies() {
+            document.getElementById('cookie-banner').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+        }
+
+        function declineCookies() {
+            document.getElementById('cookie-banner').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'false');
+        }
+
+        // Check if cookies were already accepted
+        if (localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "FixFuss Hamburg",
+        "description": "Professionelle Schuhreparatur, orthopädische Maßschuhe und Einlagen vom Meisterbetrieb in Hamburg",
+        "url": "https://fixfuss-hamburg.de",
+        "telephone": "+49 40 987 654 321",
+        "email": "info@fixfuss-hamburg.de",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Musterstraße 456",
+            "addressLocality": "Hamburg",
+            "postalCode": "20095",
+            "addressCountry": "DE"
+        },
+        "openingHours": [
+            "Mo-Fr 09:00-18:00",
+            "Sa 09:00-14:00"
+        ],
+        "priceRange": "€€",
+        "image": "https://fixfuss-hamburg.de/images/logo.jpg",
+        "sameAs": [
+            "https://www.facebook.com/fixfuss",
+            "https://www.instagram.com/fixfuss"
+        ]
+    }
+    </script>
+    <!-- Chatbot Floating Button -->
+    <button id="chatbot-btn" aria-label="Chatbot" class="fixed bottom-6 right-6 z-50 bg-leather text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center text-3xl hover:bg-leather/90 focus:outline-none focus:ring-4 focus:ring-leather/40 transition-all">
+        <i class="fab fa-telegram-plane"></i>
+    </button>
+    <script>
+        document.getElementById('chatbot-btn').addEventListener('click', function() {
+            alert('Der Chatbot für Beratung ist bald verfügbar!');
+        });
+    </script>
+</body>
+</html>
